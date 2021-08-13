@@ -8,6 +8,7 @@ import io.swagger.annotations.ApiModel;
  * Data Criacao: 11/08/2021 - 09:54
  */
 
+@ApiModel("Usuário")
 public class UsuarioDto {
 
     public String nome;

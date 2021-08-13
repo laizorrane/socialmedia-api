@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
+import java.util.List;
 
 /**
  * @author laizorrane
@@ -27,21 +28,42 @@ public class UsuarioController {
     private UsuarioService service;
 
 
+    @ApiOperation("Filtrar usuários")
+    @GetMapping
+    public ResponseEntity<List<UsuarioResponseDto>> buscarUsuario(@ApiParam("Nome dos usuários.") @RequestParam("nome") String nome) {
+        return ResponseEntity.ok(service.buscarTodosPorNome(nome));
+    }
+
     @ApiOperation("Buscar usuário")
     @GetMapping("/{idUsuario}")
-    public ResponseEntity<UsuarioResponseDto> buscarUsuario(@ApiParam("Identificação do Usuário") @PathVariable("idUsuario") String id) {
-        return ResponseEntity.ok(service.buscarPorId(Long.parseLong(id)));
+    public ResponseEntity<UsuarioResponseDto> buscarUsuario(@ApiParam("Identificação do Usuário") @PathVariable("idUsuario") Long id) {
+        return ResponseEntity.ok(service.buscarPorId(id));
     }
+
+    @ApiOperation("Editar usuário")
+    @PutMapping("/{idUsuario}")
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    public ResponseEntity<Void> editarUsuario(@ApiParam("Identificação do Usuário") @PathVariable("idUsuario") Long id,
+                                                            @RequestBody UsuarioDto usuarioDto) {
+        service.editar(id, usuarioDto);
+        return ResponseEntity.accepted().build();
+    }
+
     @ApiOperation("Cadastrar Usuário")
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<Void> cadastrarUsuario(@RequestBody UsuarioDto usuario) {
-
         Long id = service.cadastrar(usuario);
-
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(id).toUri();
-
         return ResponseEntity.created(uri).build();
+    }
+
+    @ApiOperation("Excluir usuário")
+    @DeleteMapping("/{idUsuario}")
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    public ResponseEntity<Void> editarUsuario(@ApiParam("Identificação do Usuário") @PathVariable("idUsuario") Long id) {
+        service.deletar(id);
+        return ResponseEntity.accepted().build();
     }
 
 }
