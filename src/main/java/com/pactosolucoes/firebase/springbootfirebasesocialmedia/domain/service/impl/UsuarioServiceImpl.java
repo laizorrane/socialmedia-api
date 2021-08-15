@@ -6,6 +6,7 @@ import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.entity.Us
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.exceptions.ValidacaoException;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.repository.UsuarioRepository;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.service.UsuarioService;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,9 +26,11 @@ public class UsuarioServiceImpl implements UsuarioService {
     private UsuarioRepository repository;
 
     @Override
-    public UsuarioResponseDto buscarPorEmail(String email) {
+    public Usuario buscarPorEmail(String email) {
         Usuario usuario = repository.findByEmailEquals(email);
-        return getUsuarioResponse(usuario);
+        if(usuario == null)
+            throw new ValidacaoException(String.format("Não foi encontrado usuário com o email: %s", email));
+        return usuario;
     }
 
     @Override
@@ -41,6 +44,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 
     @Override
     public Long cadastrar(UsuarioDto usuarioDto) {
+        this.validar(usuarioDto);
         Usuario usuario = new Usuario(usuarioDto.nome, usuarioDto.email, usuarioDto.senha);
 
         usuario = repository.save(usuario);
@@ -62,23 +66,23 @@ public class UsuarioServiceImpl implements UsuarioService {
 
     @Override
     public List<UsuarioResponseDto> buscarTodosPorNome(String nome) {
-        List<Usuario> listaUsuario = repository.buscarTodosContemNome("%"+nome+"%");
+        List<Usuario> listaUsuario = repository.buscarTodosContemNome("%" + nome + "%");
 
-        if(listaUsuario == null)
+        if (listaUsuario == null)
             listaUsuario = new ArrayList<>();
 
         return listaUsuario.stream().map(this::getUsuarioResponseSemSenha).collect(Collectors.toList());
     }
 
-    private UsuarioResponseDto getUsuarioResponse(Usuario usuario){
+    private UsuarioResponseDto getUsuarioResponse(Usuario usuario) {
         return new UsuarioResponseDto(usuario.getNome(), usuario.getSenha(), usuario.getEmail(), usuario.getId().toString());
     }
 
-    private UsuarioResponseDto getUsuarioResponseSemSenha(Usuario usuario){
+    private UsuarioResponseDto getUsuarioResponseSemSenha(Usuario usuario) {
         return new UsuarioResponseDto(usuario.getNome(), "****", usuario.getEmail(), usuario.getId().toString());
     }
 
-    private Usuario getUsuarioPorId(Long id){
+    private Usuario getUsuarioPorId(Long id) {
         Usuario usuario = repository.findById(id).orElse(null);
         if (usuario == null)
             throw new ValidacaoException(String.format("Usuário com o id = '%s' não foi encontrado.", id), 404);
@@ -88,5 +92,23 @@ public class UsuarioServiceImpl implements UsuarioService {
 
     public void setRepository(UsuarioRepository repository) {
         this.repository = repository;
+    }
+
+    private void validar(UsuarioDto usuarioDto) {
+        if (usuarioDto == null)
+            throw new ValidacaoException("Obrigatório informar usuário");
+
+        if (StringUtils.isBlank(usuarioDto.nome))
+            throw new ValidacaoException("Obrigatório informar um nome");
+
+        if (StringUtils.isBlank(usuarioDto.email))
+            throw new ValidacaoException("Obrigatório informar email");
+
+        if (StringUtils.isBlank(usuarioDto.senha))
+            throw new ValidacaoException("Obrigatório informar senha");
+
+        if (!usuarioDto.email.contains("@"))
+            throw new ValidacaoException("Email informado é inválido");
+
     }
 }

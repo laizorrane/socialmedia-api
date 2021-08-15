@@ -2,27 +2,30 @@ package com.pactosolucoes.firebase.springbootfirebasesocialmedia.api.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
 import java.util.Date;
 
+
 /**
  * @author laizorrane
- * Data Criacao: 11/08/2021 - 13:28
+ * Data Criacao: 15/08/2021 - 09:40
  */
 
-@ApiModel("Postagem Response")
-public class PostagemResponseDto extends PostagemDto {
+@ApiModel("Comentario Response")
+public class ComentarioResponseDto extends ComentarioDto {
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy HH:mm:ss", locale = "pt-BR", timezone = "Brazil/East")
     public Date data;
-    public String id;
+    public String idComentario;
     public UsuarioResponseDto usuario;
 
-    public PostagemResponseDto(String conteudo, Date data, String id, UsuarioResponseDto usuario) {
-        super(conteudo);
+    public ComentarioResponseDto(String conteudo, Date data, String id, UsuarioResponseDto usuario) {
+        super(conteudo, id);
         this.data = data;
-        this.id = id;
+        this.idComentario = id;
         this.usuario = usuario;
     }
 
- }
+
+}

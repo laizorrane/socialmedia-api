@@ -182,6 +182,7 @@
     <orderEntry type="library" name="Maven: io.netty:netty-handler:4.1.66.Final" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-resolver:4.1.66.Final" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-transport:4.1.66.Final" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.projectlombok:lombok:1.18.12" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework.boot:spring-boot-starter-test:2.5.3" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework.boot:spring-boot-test:2.5.3" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework.boot:spring-boot-test-autoconfigure:2.5.3" level="project" />

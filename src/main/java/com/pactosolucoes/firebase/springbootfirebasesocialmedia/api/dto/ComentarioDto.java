@@ -9,9 +9,11 @@ public class ComentarioDto {
     public String conteudo;
     public String idPostagem;
 
+
     public ComentarioDto(String conteudo, String idPostagem) {
         this.conteudo = conteudo;
         this.idPostagem = idPostagem;
+
     }
 
     public ComentarioDto() {

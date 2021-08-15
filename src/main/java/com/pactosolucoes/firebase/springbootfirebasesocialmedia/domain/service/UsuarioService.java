@@ -2,6 +2,7 @@ package com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.service;
 
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.api.dto.UsuarioDto;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.api.dto.UsuarioResponseDto;
+import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.entity.Usuario;
 
 import java.util.List;
 
@@ -11,7 +12,7 @@ import java.util.List;
  */
 public interface UsuarioService {
 
-    UsuarioResponseDto buscarPorEmail(String email);
+    Usuario buscarPorEmail(String email);
 
     void editar(Long idUsuario, UsuarioDto usuarioDto);
 
