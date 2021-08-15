@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="923a515a-6a64-409e-a903-53fb5010e2d1" name="Default Changelist" comment="" />
+    <list default="true" id="923a515a-6a64-409e-a903-53fb5010e2d1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/entity/Curtida.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,14 +41,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/controller/ComentarioController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="57" selection-start-line="57" selection-end-line="57" />
+            <state relative-caret-position="527">
+              <caret line="67" column="40" selection-start-line="67" selection-start-column="40" selection-end-line="67" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/entity/Curtida.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -106,8 +117,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/entity/Postagem.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/entity/Comentario.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/ComentarioService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/controller/ComentarioController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/impl/ComentarioServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/controller/ComentarioController.java" />
       </list>
     </option>
   </component>
@@ -364,12 +375,12 @@
       <updated>1628814355026</updated>
       <workItem from="1628814357945" duration="55000" />
       <workItem from="1628814427280" duration="24330000" />
-      <workItem from="1629029375289" duration="10012000" />
+      <workItem from="1629029375289" duration="10375000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34397000" />
+    <option name="totallyTimeSpent" value="34760000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-147" width="1936" height="1056" extended-state="6" />
@@ -792,11 +803,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/controller/ComentarioController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        <state relative-caret-position="527">
+          <caret line="67" column="40" selection-start-line="67" selection-start-column="40" selection-end-line="67" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/entity/Curtida.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
         </state>
       </provider>
     </entry>
