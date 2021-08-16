@@ -3,19 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="923a515a-6a64-409e-a903-53fb5010e2d1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/controller/PostagemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/controller/PostagemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/controller/SeguindoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/controller/SeguindoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/dto/PostagemResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/dto/PostagemResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/repository/PostagemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/repository/PostagemRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/PostagemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/PostagemService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/impl/PostagemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/impl/PostagemServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/impl/UsuarioServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/impl/UsuarioServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/controller/PostagemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/controller/PostagemController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/controller/SeguindoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/controller/SeguindoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/dto/PostagemResponseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/dto/PostagemResponseDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/repository/PostagemRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/repository/PostagemRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/PostagemService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/PostagemService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/impl/PostagemServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/impl/PostagemServiceImpl.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -220,115 +207,6 @@
               <item name="springbootfirebasesocialmedia" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="socialmedia-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="socialmedia-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="springbootfirebasesocialmedia" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socialmedia-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="socialmedia-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="springbootfirebasesocialmedia" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="dto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socialmedia-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="socialmedia-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="springbootfirebasesocialmedia" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socialmedia-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="socialmedia-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="springbootfirebasesocialmedia" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="openapi" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socialmedia-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="socialmedia-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="springbootfirebasesocialmedia" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socialmedia-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="socialmedia-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="springbootfirebasesocialmedia" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socialmedia-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="socialmedia-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="springbootfirebasesocialmedia" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socialmedia-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="socialmedia-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="springbootfirebasesocialmedia" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socialmedia-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="socialmedia-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="springbootfirebasesocialmedia" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socialmedia-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="socialmedia-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="springbootfirebasesocialmedia" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socialmedia-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="socialmedia-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="springbootfirebasesocialmedia" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -391,18 +269,18 @@
       <updated>1628814355026</updated>
       <workItem from="1628814357945" duration="55000" />
       <workItem from="1628814427280" duration="24330000" />
-      <workItem from="1629029375289" duration="42513000" />
+      <workItem from="1629029375289" duration="43281000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66898000" />
+    <option name="totallyTimeSpent" value="67666000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15658094" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15658094" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -414,12 +292,12 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.3207856" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3207856" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.30605564" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.30605564" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
