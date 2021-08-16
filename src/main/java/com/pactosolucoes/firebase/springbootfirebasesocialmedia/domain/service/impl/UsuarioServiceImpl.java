@@ -49,6 +49,7 @@ public class UsuarioServiceImpl implements UsuarioService {
         Usuario usuario = new Usuario(usuarioDto.nome, usuarioDto.email, usuarioDto.senha, usuarioDto.imagemPerfil);
 
         usuario = repository.save(usuario);
+        seguir(usuario.getId(), usuario.getEmail());
         return usuario.getId();
     }
 

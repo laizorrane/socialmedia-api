@@ -7,13 +7,13 @@ import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.entity.Po
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.entity.Usuario;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.exceptions.ValidacaoException;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.repository.PostagemRepository;
+import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.repository.UsuarioRepository;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.service.PostagemService;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.service.UsuarioService;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.util.Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -77,9 +77,9 @@ public class PostagemServiceImpl implements PostagemService {
     }
 
     @Override
-    public List<PostagemResponseDto> buscarPostagens(String email) {
-       List<Postagem> postagens = repository.findAll();
-       return postagens.stream().map(this::getPostagemReponseDto).collect(Collectors.toList());
+    public List<PostagemResponseDto> buscarPostagens() {
+        List<Postagem> postagens = repository.findAll();
+        return postagens.stream().map(this::getPostagemReponseDto).collect(Collectors.toList());
     }
 
     private PostagemResponseDto getPostagemReponseDto(Postagem postagem) {
@@ -124,4 +124,24 @@ public class PostagemServiceImpl implements PostagemService {
         return like != null;
     }
 
+    @Override
+    public List<PostagemResponseDto> buscarPostagensDoUsuario(Long id) {
+        List<Postagem> postagens = repository.findAllByCriador_IdEquals(id);
+        return postagens.stream().map(this::getPostagemReponseDto).collect(Collectors.toList());
+    }
+
+    @Override
+    public List<PostagemResponseDto> buscarPostagensDoUsuario(String email) {
+        Usuario usuario = usuarioService.buscarPorEmail(email);
+        return buscarPostagensDoUsuario(usuario.getId());
+    }
+
+    @Override
+    public List<PostagemResponseDto> buscarPostagensDeQuemSigo(String email) {
+        Usuario usuario = usuarioService.buscarPorEmail(email);
+        List<Postagem> postagens = repository.buscarTodasDeQuemSigo(usuario.getId());
+        return postagens.stream().map(this::getPostagemReponseDto).collect(Collectors.toList());
+    }
+
 }
+

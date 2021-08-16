@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.xml.sax.helpers.AttributeListImpl;
 
 import java.util.List;
 
@@ -30,7 +29,6 @@ public class SeguindoController {
     @Autowired
     private JwtTokenUtil tokenUtil;
 
-    //listar quem eu sigo
     @ApiOperation("Listar todos que eu sigo.")
     @GetMapping
     public ResponseEntity<List<UsuarioResponseDto>> listar(){

@@ -3,6 +3,7 @@ package com.pactosolucoes.firebase.springbootfirebasesocialmedia.api.controller;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.api.dto.PostagemDto;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.api.dto.PostagemResponseDto;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.config.security.JwtTokenUtil;
+import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.entity.Usuario;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.service.PostagemService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -34,8 +35,26 @@ public class PostagemController {
 
     @ApiOperation("Listar todas as postagens")
     @GetMapping
-    public ResponseEntity<List<PostagemResponseDto>> buscarTodasPostagens(@ApiParam("Lista de postagens") @RequestParam("email") String email) {
-        return ResponseEntity.ok(service.buscarPostagens(email));
+    public ResponseEntity<List<PostagemResponseDto>> buscarTodasPostagens() {
+        return ResponseEntity.ok(service.buscarPostagens());
+    }
+
+    @ApiOperation("Listar todas as postagens de um usuário")
+    @GetMapping("/postagemUsuario")
+    public ResponseEntity<List<PostagemResponseDto>> buscarTodasPostagensDeUmUsuario(@ApiParam("Lista de postagens do usuário") @RequestParam("idUser") Long id) {
+        return ResponseEntity.ok(service.buscarPostagensDoUsuario(id));
+    }
+
+    @ApiOperation("Listar todas as postagens do meu usuário")
+    @GetMapping("/meuUsuario")
+    public ResponseEntity<List<PostagemResponseDto>> buscarTodasPostagensDoMeuUsuario() {
+        return ResponseEntity.ok(service.buscarPostagensDoUsuario(tokenUtil.getEmailUsuario()));
+    }
+
+    @ApiOperation("Listar todas as postagens de quem eu sigo.")
+    @GetMapping("/listaPost")
+    public ResponseEntity<List<PostagemResponseDto>> buscarPostagensDeUsuariosQueSigo() {
+        return ResponseEntity.ok(service.buscarPostagensDeQuemSigo(tokenUtil.getEmailUsuario()));
     }
 
     @ApiOperation("Buscar postagem específica")

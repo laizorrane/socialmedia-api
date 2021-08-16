@@ -1,5 +1,6 @@
 package com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.service;
 
+import com.pactosolucoes.firebase.springbootfirebasesocialmedia.api.controller.SeguindoController;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.api.dto.PostagemDto;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.api.dto.PostagemResponseDto;
 
@@ -19,7 +20,13 @@ public interface PostagemService {
 
     PostagemResponseDto buscarPostPeloId(String id);
 
-    List<PostagemResponseDto> buscarPostagens(String email);
+    List<PostagemResponseDto> buscarPostagens();
+
+    List<PostagemResponseDto> buscarPostagensDoUsuario(Long id);
+
+    List<PostagemResponseDto> buscarPostagensDoUsuario(String email);
+
+    List<PostagemResponseDto> buscarPostagensDeQuemSigo(String email);
 
     void darLike(String id, String email);
 
