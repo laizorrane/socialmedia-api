@@ -13,6 +13,7 @@ import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.util.Util
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -86,6 +87,41 @@ public class PostagemServiceImpl implements PostagemService {
         UsuarioResponseDto usuarioResponseDto = new UsuarioResponseDto( criador.getNome(), criador.getId().toString());
         return new PostagemResponseDto(postagem.getConteudo(), postagem.getData(), postagem.getId(), usuarioResponseDto);
 
-
     }
+
+    @Override
+    public void darLike(String id, String email) {
+        Postagem postagem = getPostagemPorId(id);
+
+        Usuario usuario = usuarioService.buscarPorEmail(email);
+
+        if(verificarSeNaoTemLike(postagem.getLikes(), email)){
+            postagem.getLikes().add(usuario);
+            repository.save(postagem);
+        }
+    }
+
+    @Override
+    public  void removerLike(String id, String email) {
+        Postagem postagem = getPostagemPorId(id);
+        Usuario usuario = usuarioService.buscarPorEmail(email);
+        if(verificarSeTemLike(postagem.getLikes(), email)) {
+            postagem.getLikes().remove(usuario);
+            repository.save((postagem));
+        }
+    }
+
+    private boolean verificarSeNaoTemLike(List<Usuario> likes, String email){
+        return !verificarSeTemLike(likes, email);
+    }
+
+    private boolean verificarSeTemLike(List<Usuario> likes, String email){
+        Usuario like = likes.stream()
+                .filter(usuario1 -> usuario1.getEmail().equalsIgnoreCase(email))
+                .findFirst()
+                .orElse(null);
+
+        return like != null;
+    }
+
 }

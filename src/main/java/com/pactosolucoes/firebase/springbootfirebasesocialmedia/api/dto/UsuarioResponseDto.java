@@ -17,8 +17,8 @@ public class UsuarioResponseDto extends UsuarioDto {
         this.id = id;
     }
 
-    public UsuarioResponseDto(String nome, String senha, String email, String id) {
-        super(nome, senha, email);
+    public UsuarioResponseDto(String nome, String senha, String email, String id, String imagemPerfil) {
+        super(nome, senha, email, imagemPerfil);
         this.id = id;
     }
 }

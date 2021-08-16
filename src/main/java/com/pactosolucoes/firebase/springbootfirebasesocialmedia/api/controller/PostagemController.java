@@ -66,7 +66,23 @@ public class PostagemController {
     @ApiOperation("Excluir uma postagem (apenas o criador pode excluir).")
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public ResponseEntity<Void> excluirPostagem(@ApiParam(required = true, value = "Id de identificação da postagem a ser excluida.") @PathVariable("idPostagem") String id){
+    public ResponseEntity<Void> excluirPostagem(@ApiParam(required = true, value = "Id de identificação da postagem a ser excluida.") @PathVariable("id") String id){
         service.excluir(tokenUtil.getEmailUsuario(), id);
         return ResponseEntity.accepted().build();
-    }}
+    }
+
+    @ApiOperation("Dar Like na postagem.")
+    @PostMapping("/{id}/like")
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    public ResponseEntity<Void> darLike(@ApiParam(required = true, value = "Id de identificação da postagem a receber like.") @PathVariable("id") String id){
+        service.darLike(id, tokenUtil.getEmailUsuario());
+        return ResponseEntity.accepted().build();
+    }
+    @ApiOperation("Remover Like da postagem.")
+    @DeleteMapping("/{id}/like")
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    public ResponseEntity<Void> removerLike(@ApiParam(required = true, value = "Id de identificação da postagem a remover like.") @PathVariable("id") String id){
+        service.removerLike(id, tokenUtil.getEmailUsuario());
+        return ResponseEntity.accepted().build();
+    }
+}

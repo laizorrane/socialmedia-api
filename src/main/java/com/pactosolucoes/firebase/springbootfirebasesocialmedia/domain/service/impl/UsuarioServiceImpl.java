@@ -39,13 +39,14 @@ public class UsuarioServiceImpl implements UsuarioService {
         usuario.setNome(usuarioDto.nome);
         usuario.setSenha(usuarioDto.senha);
         usuario.setEmail(usuarioDto.email);
+        usuario.setImagemPerfil(usuarioDto.imagemPerfil);
         repository.save(usuario);
     }
 
     @Override
     public Long cadastrar(UsuarioDto usuarioDto) {
         this.validar(usuarioDto);
-        Usuario usuario = new Usuario(usuarioDto.nome, usuarioDto.email, usuarioDto.senha);
+        Usuario usuario = new Usuario(usuarioDto.nome, usuarioDto.email, usuarioDto.senha, usuarioDto.imagemPerfil);
 
         usuario = repository.save(usuario);
         return usuario.getId();
@@ -75,11 +76,11 @@ public class UsuarioServiceImpl implements UsuarioService {
     }
 
     private UsuarioResponseDto getUsuarioResponse(Usuario usuario) {
-        return new UsuarioResponseDto(usuario.getNome(), usuario.getSenha(), usuario.getEmail(), usuario.getId().toString());
+        return new UsuarioResponseDto(usuario.getNome(), usuario.getSenha(), usuario.getEmail(), usuario.getId().toString(), usuario.getImagemPerfil());
     }
 
     private UsuarioResponseDto getUsuarioResponseSemSenha(Usuario usuario) {
-        return new UsuarioResponseDto(usuario.getNome(), "****", usuario.getEmail(), usuario.getId().toString());
+        return new UsuarioResponseDto(usuario.getNome(), "****", usuario.getEmail(), usuario.getId().toString(), usuario.getImagemPerfil());
     }
 
     private Usuario getUsuarioPorId(Long id) {
@@ -110,5 +111,61 @@ public class UsuarioServiceImpl implements UsuarioService {
         if (!usuarioDto.email.contains("@"))
             throw new ValidacaoException("Email informado é inválido");
 
+    }
+
+    @Override
+    public void seguir(Long idUsuario, String emailUsuarioLogado) {
+        Usuario quemVouSeguir = getUsuarioPorId(idUsuario);
+        Usuario usuarioLogado = buscarPorEmail(emailUsuarioLogado);
+        if(naoSigo(usuarioLogado.getListaQuemSigo(), quemVouSeguir.getId())){
+            usuarioLogado.getListaQuemSigo().add(quemVouSeguir);
+            repository.save(usuarioLogado);
+        }
+    }
+
+    private boolean naoSigo(List<Usuario> listaQueSigo, Long id){
+        return !jaSigo(listaQueSigo, id);
+    }
+
+    private boolean jaSigo(List<Usuario> listaQueSigo, Long id){
+        return listaQueSigo.stream()
+                .filter(usuario -> usuario.getId().equals(id))
+                .findFirst()
+                .orElse(null) != null;
+    }
+
+    @Override
+    public void darUnfollow(Long idUsuario, String emailUsuario) {
+        Usuario quemVouPararDeSeguir = getUsuarioPorId(idUsuario);
+        Usuario usuarioLogado = buscarPorEmail(emailUsuario);
+        if(jaSigo(usuarioLogado.getListaQuemSigo(), quemVouPararDeSeguir.getId())){
+            usuarioLogado.setListaQuemSigo(removerQuemSigo(usuarioLogado.getListaQuemSigo(), quemVouPararDeSeguir.getId()));
+            repository.save(usuarioLogado);
+        }
+    }
+
+    private List<Usuario> removerQuemSigo(List<Usuario> listaQuemSigo, Long idRemocao){
+        return listaQuemSigo.stream()
+                .filter(usuario -> !usuario.getId().equals(idRemocao))
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<UsuarioResponseDto> listarQuemEuSigo(String emailUsuario) {
+        Usuario usuario = buscarPorEmail(emailUsuario);
+        return usuario.getListaQuemSigo()
+                .stream().map(this::getUsuarioResponse)
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<UsuarioResponseDto> listarQuemMeSegue(String emailUsuario) {
+        Usuario usuario = buscarPorEmail(emailUsuario);
+        List<Usuario> usuarios = repository.buscarTodosQueMeSegue(usuario.getId());
+        if(usuarios != null && !usuarios.isEmpty()){
+            return usuarios.stream().map(this::getUsuarioResponse)
+                    .collect(Collectors.toList());
+        }
+        return new ArrayList<>();
     }
 }

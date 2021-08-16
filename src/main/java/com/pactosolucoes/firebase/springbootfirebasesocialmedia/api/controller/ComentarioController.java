@@ -22,7 +22,7 @@ import java.util.List;
  * Data Criacao: 13/08/2021 - 13:16
  */
 
-@Api(tags = "Comentarios")
+@Api(tags = "Comentários")
 @RequestMapping("/comentarios")
 @RestController
 public class ComentarioController {
@@ -36,7 +36,7 @@ public class ComentarioController {
 
     @ApiOperation("Cadastrar um novo comentário para a postagem.")
     @PostMapping
-    @ResponseStatus(HttpStatus.ACCEPTED)
+    @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<Void> cadastrarComentario(@ApiParam(name = "Comentário", required = true, value = "Representação de um comentário.") @RequestBody ComentarioDto comentarioDto){
        String idPostagem = service.cadastrar(comentarioDto, tokenUtil.getEmailUsuario());
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(idPostagem).toUri();
@@ -66,7 +66,6 @@ public class ComentarioController {
     @ApiOperation("Editar um comentário.")
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.ACCEPTED)
-
     public ResponseEntity<Void> editarComentario(@ApiParam(name = "Comentario", required = true, value = "Representação de um comentário.") @PathVariable("id") String id, @RequestBody ComentarioDto comentarioDto) {
 
         service.editar(id, comentarioDto);

@@ -23,6 +23,15 @@ public interface UsuarioService {
     List<UsuarioResponseDto> buscarTodosPorNome(String nome);
 
     void deletar(Long id);
+
+    void seguir(Long idUsuario, String emailUsuarioLogado);
+
+
+    void darUnfollow(Long idUsuario, String emailUsuario);
+
+    List<UsuarioResponseDto> listarQuemEuSigo(String emailUsuario);
+
+    List<UsuarioResponseDto> listarQuemMeSegue(String emailUsuario);
 }
 
 

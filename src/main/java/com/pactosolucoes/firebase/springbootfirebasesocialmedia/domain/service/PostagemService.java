@@ -21,5 +21,8 @@ public interface PostagemService {
 
     List<PostagemResponseDto> buscarPostagens(String email);
 
+    void darLike(String id, String email);
+
+    void removerLike(String id, String email);
 
 }

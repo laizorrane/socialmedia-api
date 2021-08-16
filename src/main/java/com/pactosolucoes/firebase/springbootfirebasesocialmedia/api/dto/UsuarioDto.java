@@ -16,11 +16,14 @@ public class UsuarioDto {
     public String senha;
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public String email;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public String imagemPerfil;
 
-    public UsuarioDto(String nome, String senha, String email) {
+    public UsuarioDto(String nome, String senha, String email, String imagemPerfil) {
         this.nome = nome;
         this.senha = senha;
         this.email = email;
+        this.imagemPerfil = imagemPerfil;
     }
 
     public UsuarioDto(String nome) {
