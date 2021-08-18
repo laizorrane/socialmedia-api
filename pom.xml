@@ -8,6 +8,7 @@
 		<version>2.5.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+	
 	<groupId>com.pactosolucoes.firebase</groupId>
 	<artifactId>socialmedia-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -16,6 +17,23 @@
 	<properties>
 		<java.version>8</java.version>
 		<springfox.version>3.0.0</springfox.version>
+		<java.version>8</java.version>        
+        
+		<DB_URL>jdbc:postgresql://localhost:5432/socialmedia</DB_URL>
+		<DB_USERNAME>postgres</DB_USERNAME>
+		<DB_PASSWORD>postgres</DB_PASSWORD>
+		<SERVER_PORT>8080</SERVER_PORT>
+		
+		<contexto></contexto>
+        <maxMemory>512m</maxMemory>        
+        <SECURITY_REQUIRE_SSL>false</SECURITY_REQUIRE_SSL>
+
+		<host></host>
+        <sshUser></sshUser>
+        <sshPort></sshPort>
+        <rpwd></rpwd>
+        <keyfile></keyfile>
+
 	</properties>
 	<dependencies>
 		<dependency>
@@ -83,13 +101,155 @@
 		</dependency>
 	</dependencies>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<properties>
+				<DB_URL>jdbc:postgresql://192.168.3.47:5432/socialmedia</DB_URL>
+			</properties>
+		</profile>
+
+		<profile>
+			<id>prod</id>
+			<properties>
+				<DB_URL>jdbc:postgresql://${HOST_DB}:5432/socialmedia</DB_URL>
+				<DB_PASSWORD>${PASSWORD_DB}</DB_PASSWORD>
+			</properties>
+		</profile>
+
+        <profile>
+            <id>scp</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-antrun-plugin</artifactId>
+                        <version>1.8</version>
+                        <dependencies>
+                            <dependency>
+                                <groupId>org.apache.ant</groupId>
+                                <artifactId>ant-jsch</artifactId>
+                                <version>1.9.4</version>
+                            </dependency>
+                            <dependency>
+                                <groupId>com.jcraft</groupId>
+                                <artifactId>jsch</artifactId>
+                                <version>0.1.54</version>
+                            </dependency>
+                        </dependencies>
+                        <executions>
+                            <execution>
+                                <id>scp-exec</id>
+                                <phase>pre-integration-test</phase>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                                <configuration>
+                                    <target name="task-scp">
+                                        <tstamp>
+                                            <format property="now" pattern="yyyy-MM-dd HH:mm:ss"/>
+                                        </tstamp>
+                                        <echo message="${now} Transferindo ${sshUser}@${host}:/opt/${project.artifactId}/${project.artifactId}.jar..."/>
+                                        <sshexec port="${sshPort}" verbose="false"
+                                                 trust="true" host="${host}"
+                                                 username="${sshUser}"
+                                                 passphrase="${sshPwd}"
+                                                 keyfile="${keyfile}"
+                                                 command="mkdir -p /opt/${project.artifactId}"/>
+                                        <scp trust="true" file="${basedir}/target/${project.artifactId}.jar"
+                                             port="${sshPort}"
+                                             verbose="false"
+                                             passphrase="${sshPwd}"
+                                             keyfile="${keyfile}"
+                                             todir="${sshUser}@${host}:/opt/${project.artifactId}"/>
+                                        <tstamp>
+                                            <format property="end" pattern="yyyy-MM-dd HH:mm:ss"/>
+                                        </tstamp>
+                                        <echo message="${end} Transferencia concluida!"/>
+                                    </target>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>redeploy</id>
+            <build>
+                <finalName>${project.artifactId}</finalName>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-antrun-plugin</artifactId>
+                        <version>1.8</version>
+                        <dependencies>
+                            <dependency>
+                                <groupId>org.apache.ant</groupId>
+                                <artifactId>ant-jsch</artifactId>
+                                <version>1.9.4</version>
+                            </dependency>
+                            <dependency>
+                                <groupId>com.jcraft</groupId>
+                                <artifactId>jsch</artifactId>
+                                <version>0.1.54</version>
+                            </dependency>
+                            <dependency>
+                                <groupId>ant-contrib</groupId>
+                                <artifactId>ant-contrib</artifactId>
+                                <version>1.0b3</version>
+                                <exclusions>
+                                    <exclusion>
+                                        <artifactId>ant</artifactId>
+                                        <groupId>ant</groupId>
+                                    </exclusion>
+                                </exclusions>
+                            </dependency>
+                        </dependencies>
+                        <executions>
+                            <execution>
+                                <id>redeploy-exec</id>
+                                <phase>post-integration-test</phase>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                                <configuration>
+                                    <target name="task-redeploy">
+                                        <tstamp>
+                                            <format property="now" pattern="yyyy-MM-dd HH:mm:ss"/>
+                                        </tstamp>
+                                        <echo message="${now} Implantar Serviço..."/>
+                                        <sshexec port="${sshPort}" verbose="false"
+                                                 trust="true" host="${host}"
+                                                 username="${sshUser}"
+                                                 passphrase="${sshPwd}"
+                                                 keyfile="${keyfile}"
+                                                 command="ln -sf /opt/${project.artifactId}/${project.build.finalName}.jar /etc/init.d/${project.artifactId} &amp;&amp; chmod a+x /etc/init.d/${project.artifactId} &amp;&amp; /etc/init.d/${project.artifactId} restart"/>
+                                        <echo message="${end} OK!"/>
+                                    </target>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+	<build>        
+		<finalName>socialmedia-api</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <executable>true</executable>
+                    <fork>true</fork>                    
+                    <jvmArguments>-Xmx${maxMemory}</jvmArguments>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
