@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.pactosolucoes.firebase.springbootfirebasesocialmedia.SpringbootFirebaseSocialmediaApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 31.46 s - in com.pactosolucoes.firebase.springbootfirebasesocialmedia.SpringbootFirebaseSocialmediaApplicationTests

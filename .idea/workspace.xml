@@ -3,6 +3,59 @@
   <component name="ChangeListManager">
     <list default="true" id="923a515a-6a64-409e-a903-53fb5010e2d1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <list id="20315a88-6143-4161-8a92-433bdf78f536" name="Ignore" comment="">
+      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/socialmedia-api-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/socialmedia-api-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/surefire-reports/2021-08-17T17-00-18_011-jvmRun1.dump" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.pactosolucoes.firebase.springbootfirebasesocialmedia.SpringbootFirebaseSocialmediaApplicationTests.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/surefire-reports/com.pactosolucoes.firebase.springbootfirebasesocialmedia.SpringbootFirebaseSocialmediaApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/socialmedia-api.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/SpringbootFirebaseSocialmediaApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/SpringbootFirebaseSocialmediaApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/controller/ComentarioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/controller/ComentarioController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/controller/JwtAuthenticationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/controller/JwtAuthenticationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/controller/PostagemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/controller/PostagemController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/controller/SeguindoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/controller/SeguindoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/controller/UsuarioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/controller/UsuarioController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/dto/ComentarioDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/dto/ComentarioDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/dto/ComentarioResponseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/dto/ComentarioResponseDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/dto/DetalheErro.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/dto/DetalheErro.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/dto/JwtRequestDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/dto/JwtRequestDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/dto/JwtResponseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/dto/JwtResponseDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/dto/PostagemDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/dto/PostagemDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/dto/PostagemResponseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/dto/PostagemResponseDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/dto/UsuarioDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/dto/UsuarioDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/dto/UsuarioResponseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/dto/UsuarioResponseDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/handler/ResourceExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/handler/ResourceExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/config/openapi/SpringFoxConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/config/openapi/SpringFoxConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/config/security/JwtAuthenticationEntryPoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/config/security/JwtAuthenticationEntryPoint.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/config/security/JwtRequestFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/config/security/JwtRequestFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/config/security/JwtTokenUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/config/security/JwtTokenUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/config/security/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/config/security/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/entity/Comentario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/entity/Comentario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/entity/Postagem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/entity/Postagem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/entity/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/entity/Usuario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/exceptions/ValidacaoException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/exceptions/ValidacaoException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/repository/ComentarioRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/repository/ComentarioRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/repository/PostagemRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/repository/PostagemRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/repository/UsuarioRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/repository/UsuarioRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/ComentarioService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/ComentarioService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/PostagemService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/PostagemService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/UsuarioService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/UsuarioService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/impl/ComentarioServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/impl/ComentarioServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/impl/JwtUserDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/impl/JwtUserDetailsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/impl/PostagemServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/impl/PostagemServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/impl/UsuarioServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/impl/UsuarioServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/util/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/util/Utils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/firebase/FirebaseInitialization.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/SpringbootFirebaseSocialmediaApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/pactosolucoes/firebase/springbootfirebasesocialmedia/SpringbootFirebaseSocialmediaApplicationTests.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -20,7 +73,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/impl/PostagemServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
+            <state relative-caret-position="2772">
               <caret line="141" column="18" selection-start-line="141" selection-start-column="18" selection-end-line="141" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -29,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/entity/Postagem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="27" column="73" lean-forward="true" selection-start-line="27" selection-start-column="73" selection-end-line="27" selection-end-column="73" />
+            <state relative-caret-position="638">
+              <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -42,13 +95,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/dto/ComentarioDto.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/repository/PostagemRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="24" column="57" lean-forward="true" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
-              <folding>
-                <element signature="e#0#130#1" expanded="true" />
-              </folding>
+            <state relative-caret-position="374">
+              <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -56,8 +133,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/controller/PostagemController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="54" column="29" lean-forward="true" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
+            <state relative-caret-position="858">
+              <caret line="54" column="29" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -68,11 +145,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/repository/UsuarioRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="23" column="25" lean-forward="true" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+            <state relative-caret-position="374">
+              <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#0#52#1" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -81,7 +157,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/entity/Usuario.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
+            <state relative-caret-position="198">
               <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -116,7 +192,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/controller/UsuarioController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/impl/PostagemService.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/JwtUserDetailsService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/impl/JwtUserDetailsService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/util/Utils.java" />
@@ -141,6 +216,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/impl/UsuarioServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/repository/PostagemRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/impl/PostagemServiceImpl.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
       </list>
     </option>
   </component>
@@ -151,11 +228,27 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="socialmedia-api" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="socialmedia-api" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1358" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="height" value="784" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -163,7 +256,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -175,6 +267,11 @@
             <path>
               <item name="socialmedia-api" type="b2602c69:ProjectViewProjectNode" />
               <item name="socialmedia-api" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="socialmedia-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="socialmedia-api" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -188,29 +285,13 @@
               <item name="socialmedia-api" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socialmedia-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="socialmedia-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="springbootfirebasesocialmedia" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socialmedia-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="socialmedia-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="springbootfirebasesocialmedia" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -263,24 +344,34 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="923a515a-6a64-409e-a903-53fb5010e2d1" name="Default Changelist" comment="" />
+      <changelist id="20315a88-6143-4161-8a92-433bdf78f536" name="Ignore" comment="" />
       <created>1628814355026</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1628814355026</updated>
       <workItem from="1628814357945" duration="55000" />
       <workItem from="1628814427280" duration="24330000" />
-      <workItem from="1629029375289" duration="43281000" />
+      <workItem from="1629029375289" duration="45904000" />
+      <workItem from="1629139443597" duration="3765000" />
     </task>
+    <task id="LOCAL-00001" summary="Alteração de versão java">
+      <created>1629230783310</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1629230783310</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67666000" />
+    <option name="totallyTimeSpent" value="74054000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15658094" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21558245" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -288,26 +379,26 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection Results" weight="0.3289689" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3289689" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3207856" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.30605564" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.30605564" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info anchor="bottom" id="Messages" order="14" weight="0.3289689" />
+      <window_info anchor="bottom" id="Inspection Results" order="15" weight="0.3289689" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.32980332" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" />
@@ -352,6 +443,12 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="Alteração de versão java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alteração de versão java" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/HELP.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -364,13 +461,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/impl/PostagemService.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="74" column="35" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-orm/5.3.9/spring-orm-5.3.9.jar!/org/springframework/orm/jpa/LocalContainerEntityManagerFactoryBean.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -440,13 +530,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/impl/ComentarioService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/impl/ComentarioService.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/entity/Comentario.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
@@ -464,13 +548,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/dto/ComentarioDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
@@ -504,13 +581,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/entity/Curtida.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/entity/Curtida.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/config/openapi/SpringFoxConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="449">
@@ -705,51 +776,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/repository/PostagemRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="24" column="57" lean-forward="true" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
-          <folding>
-            <element signature="e#0#130#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/entity/Usuario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/repository/UsuarioRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="23" column="25" lean-forward="true" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#0#52#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/impl/PostagemServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
+        <state relative-caret-position="2772">
           <caret line="141" column="18" selection-start-line="141" selection-start-column="18" selection-end-line="141" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/controller/PostagemController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="54" column="29" lean-forward="true" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -758,11 +788,69 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/entity/Postagem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="27" column="73" lean-forward="true" selection-start-line="27" selection-start-column="73" selection-end-line="27" selection-end-column="73" />
+        <state relative-caret-position="638">
+          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/dto/ComentarioDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/repository/PostagemRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/controller/PostagemController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="858">
+          <caret line="54" column="29" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/repository/UsuarioRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/entity/Usuario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -821,7 +909,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
