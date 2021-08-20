@@ -7,6 +7,7 @@ import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.exception
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.repository.UsuarioRepository;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.service.UsuarioService;
 import org.apache.commons.lang3.StringUtils;
+import org.aspectj.apache.bcel.Repository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -47,11 +48,11 @@ public class UsuarioServiceImpl implements UsuarioService {
     public Long cadastrar(UsuarioDto usuarioDto) {
         this.validar(usuarioDto);
         Usuario usuario = new Usuario(usuarioDto.nome, usuarioDto.email, usuarioDto.senha, usuarioDto.imagemPerfil);
-
         usuario = repository.save(usuario);
         seguir(usuario.getId(), usuario.getEmail());
         return usuario.getId();
     }
+
 
     @Override
     public UsuarioResponseDto buscarPorId(Long id) {
@@ -112,6 +113,8 @@ public class UsuarioServiceImpl implements UsuarioService {
         if (!usuarioDto.email.contains("@"))
             throw new ValidacaoException("Email informado é inválido");
 
+        if (repository.findByEmailEquals(usuarioDto.email) != null)
+        throw new ValidacaoException(String.format("E-mail informado já existe: %s", usuarioDto.email));
     }
 
     @Override
