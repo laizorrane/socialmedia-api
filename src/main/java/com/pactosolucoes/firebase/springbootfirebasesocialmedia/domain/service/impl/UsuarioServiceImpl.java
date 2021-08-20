@@ -29,7 +29,7 @@ public class UsuarioServiceImpl implements UsuarioService {
     @Override
     public Usuario buscarPorEmail(String email) {
         Usuario usuario = repository.findByEmailEquals(email);
-        if(usuario == null)
+        if (usuario == null)
             throw new ValidacaoException(String.format("Não foi encontrado usuário com o email: %s", email));
         return usuario;
     }
@@ -98,6 +98,7 @@ public class UsuarioServiceImpl implements UsuarioService {
     }
 
     private void validar(UsuarioDto usuarioDto) {
+
         if (usuarioDto == null)
             throw new ValidacaoException("Obrigatório informar usuário");
 
@@ -114,24 +115,24 @@ public class UsuarioServiceImpl implements UsuarioService {
             throw new ValidacaoException("Email informado é inválido");
 
         if (repository.findByEmailEquals(usuarioDto.email) != null)
-        throw new ValidacaoException(String.format("E-mail informado já existe: %s", usuarioDto.email));
+            throw new ValidacaoException(String.format("E-mail informado já existe: %s", usuarioDto.email));
     }
 
     @Override
     public void seguir(Long idUsuario, String emailUsuarioLogado) {
         Usuario quemVouSeguir = getUsuarioPorId(idUsuario);
         Usuario usuarioLogado = buscarPorEmail(emailUsuarioLogado);
-        if(naoSigo(usuarioLogado.getListaQuemSigo(), quemVouSeguir.getId())){
+        if (naoSigo(usuarioLogado.getListaQuemSigo(), quemVouSeguir.getId())) {
             usuarioLogado.getListaQuemSigo().add(quemVouSeguir);
             repository.save(usuarioLogado);
         }
     }
 
-    private boolean naoSigo(List<Usuario> listaQueSigo, Long id){
+    private boolean naoSigo(List<Usuario> listaQueSigo, Long id) {
         return !jaSigo(listaQueSigo, id);
     }
 
-    private boolean jaSigo(List<Usuario> listaQueSigo, Long id){
+    private boolean jaSigo(List<Usuario> listaQueSigo, Long id) {
         return listaQueSigo.stream()
                 .filter(usuario -> usuario.getId().equals(id))
                 .findFirst()
@@ -142,13 +143,13 @@ public class UsuarioServiceImpl implements UsuarioService {
     public void darUnfollow(Long idUsuario, String emailUsuario) {
         Usuario quemVouPararDeSeguir = getUsuarioPorId(idUsuario);
         Usuario usuarioLogado = buscarPorEmail(emailUsuario);
-        if(jaSigo(usuarioLogado.getListaQuemSigo(), quemVouPararDeSeguir.getId())){
+        if (jaSigo(usuarioLogado.getListaQuemSigo(), quemVouPararDeSeguir.getId())) {
             usuarioLogado.setListaQuemSigo(removerQuemSigo(usuarioLogado.getListaQuemSigo(), quemVouPararDeSeguir.getId()));
             repository.save(usuarioLogado);
         }
     }
 
-    private List<Usuario> removerQuemSigo(List<Usuario> listaQuemSigo, Long idRemocao){
+    private List<Usuario> removerQuemSigo(List<Usuario> listaQuemSigo, Long idRemocao) {
         return listaQuemSigo.stream()
                 .filter(usuario -> !usuario.getId().equals(idRemocao))
                 .collect(Collectors.toList());
@@ -166,7 +167,7 @@ public class UsuarioServiceImpl implements UsuarioService {
     public List<UsuarioResponseDto> listarQuemMeSegue(String emailUsuario) {
         Usuario usuario = buscarPorEmail(emailUsuario);
         List<Usuario> usuarios = repository.buscarTodosQueMeSegue(usuario.getId());
-        if(usuarios != null && !usuarios.isEmpty()){
+        if (usuarios != null && !usuarios.isEmpty()) {
             return usuarios.stream().map(this::getUsuarioResponse)
                     .collect(Collectors.toList());
         }
