@@ -20,7 +20,7 @@ public interface PostagemRepository extends JpaRepository<Postagem, String> {
     @Query(value = " select p.* " +
             " from postagem p " +
             " inner join seguindo s " +
-            " on p.usuario_id = s.quem_sigo_id " +
+            " on p.usuarioid = s.quem_sigo_id " +
             " where s.usuario_id = :id " +
             " order by p.data desc ", nativeQuery = true)
     List<Postagem> buscarTodasDeQuemSigo(Long id);
