@@ -2,10 +2,14 @@ package com.pactosolucoes.firebase.springbootfirebasesocialmedia.api.controller;
 
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.api.dto.JwtRequestDto;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.api.dto.JwtResponseDto;
+import com.pactosolucoes.firebase.springbootfirebasesocialmedia.api.dto.UsuarioResponseDto;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.config.security.JwtTokenUtil;
+import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.entity.Usuario;
+import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.service.UsuarioService;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.service.impl.JwtUserDetailsService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -35,16 +39,21 @@ public class JwtAuthenticationController {
     private JwtTokenUtil jwtTokenUtil;
 
     @Autowired
+    private UsuarioService service;
+
+    @Autowired
     private JwtUserDetailsService userDetailsService;
 
-    @ApiOperation("Obter token.")
+    @ApiOperation("Obter token e dados do usuário.")
     @PostMapping(value = "/authenticate")
-    public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtRequestDto authenticationRequest) throws Exception {
+    public ResponseEntity<JwtResponseDto> createAuthenticationToken(@RequestBody JwtRequestDto authenticationRequest) throws Exception {
         authenticate(authenticationRequest.getEmail(), authenticationRequest.getSenha());
         final UserDetails userDetails = userDetailsService
                 .loadUserByUsername(authenticationRequest.getEmail());
         final String token = jwtTokenUtil.generateToken(userDetails);
-        return ResponseEntity.ok(new JwtResponseDto(token));
+        return ResponseEntity.ok(
+                new JwtResponseDto(token,
+                        getUsuarioResponseDto(service.buscarPorEmail(authenticationRequest.getEmail()))));
     }
 
     private void authenticate(String username, String password) throws Exception {
@@ -55,6 +64,15 @@ public class JwtAuthenticationController {
         } catch (BadCredentialsException e) {
             throw new Exception("INVALID_CREDENTIALS", e);
         }
+    }
+
+    private UsuarioResponseDto getUsuarioResponseDto(Usuario usuario){
+        return new UsuarioResponseDto(
+                usuario.getNome(),
+                usuario.getSenha(),
+                usuario.getEmail(),
+                usuario.getId().toString(),
+                usuario.getImagemPerfil());
     }
 
 }
