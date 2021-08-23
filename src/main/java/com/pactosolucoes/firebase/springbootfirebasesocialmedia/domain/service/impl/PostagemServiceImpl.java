@@ -50,7 +50,8 @@ public class PostagemServiceImpl implements PostagemService {
 
     }
 
-    private Postagem getPostagemPorId(String id) {
+    @Override
+    public Postagem getPostagemPorId(String id) {
         Postagem postagem = repository.findById(id).orElse(null);
         if (postagem == null)
             throw new ValidacaoException(String.format("Postagem com o id = '%s' não foi encontrado.", id), 404);

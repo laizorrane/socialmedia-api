@@ -20,8 +20,8 @@ public class ComentarioResponseDto extends ComentarioDto {
     public String idComentario;
     public UsuarioResponseDto usuario;
 
-    public ComentarioResponseDto(String conteudo, Date data, String id, UsuarioResponseDto usuario) {
-        super(conteudo, id);
+    public ComentarioResponseDto(String conteudo, Date data, String id, String idPostagem, UsuarioResponseDto usuario) {
+        super(conteudo, idPostagem);
         this.data = data;
         this.idComentario = id;
         this.usuario = usuario;

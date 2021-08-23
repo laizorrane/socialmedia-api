@@ -20,7 +20,11 @@ public @Data class Comentario {
     private String conteudo;
     private Date data;
 
-    @JoinColumn(name = "postagemId")
+    @JoinColumn(name = "postagem_id")
+    @ManyToOne
+    private Postagem postagem;
+
+    @JoinColumn(name = "usuario_id")
     @ManyToOne
     private Usuario criador;
 

@@ -4,10 +4,12 @@ import com.pactosolucoes.firebase.springbootfirebasesocialmedia.api.dto.Comentar
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.api.dto.ComentarioResponseDto;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.api.dto.UsuarioResponseDto;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.entity.Comentario;
+import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.entity.Postagem;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.entity.Usuario;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.exceptions.ValidacaoException;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.repository.ComentarioRepository;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.service.ComentarioService;
+import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.service.PostagemService;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.service.UsuarioService;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.util.Utils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,26 +30,29 @@ public class ComentarioServiceImpl implements ComentarioService {
     private ComentarioRepository repository;
     @Autowired
     private UsuarioService usuarioService;
+    @Autowired
+    private PostagemService postagemService;
 
     @Override
     public String cadastrar(ComentarioDto comentarioDto, String emailCriador) {
         Usuario usuario = usuarioService.buscarPorEmail(emailCriador);
-
+        Postagem postagem = postagemService.getPostagemPorId(comentarioDto.idPostagem);
         Comentario comentario = new Comentario(comentarioDto.conteudo);
         comentario.setCriador(usuario);
         comentario.setId(Utils.getIdAleatorio());
+        comentario.setPostagem(postagem);
         return repository.save(comentario).getId();
     }
 
     @Override
     public List<ComentarioResponseDto> buscarTodosComentariosDeUmPost(String idPostagem) {
-        List<Comentario> comentarios = repository.findAll();
+        List<Comentario> comentarios = repository.findAllByPostagem_id(idPostagem);
         return comentarios.stream().map(this::getComentarioResponseDto).collect(Collectors.toList());
     }
     private ComentarioResponseDto getComentarioResponseDto(Comentario comentario) {
         Usuario criador = comentario.getCriador();
         UsuarioResponseDto usuarioResponseDto = new UsuarioResponseDto( criador.getNome(), criador.getId().toString());
-        return new ComentarioResponseDto(comentario.getConteudo(), comentario.getData(), comentario.getId(), usuarioResponseDto);
+        return new ComentarioResponseDto(comentario.getConteudo(), comentario.getData(), comentario.getId(), comentario.getPostagem().getId(), usuarioResponseDto);
 
     }
 
