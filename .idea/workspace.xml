@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="923a515a-6a64-409e-a903-53fb5010e2d1" name="Default Changelist" comment="Alteração de versão java">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/dto/ComentarioResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/dto/ComentarioResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/entity/Comentario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/entity/Comentario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/repository/ComentarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/repository/ComentarioRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/PostagemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/PostagemService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/impl/ComentarioServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/impl/ComentarioServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/impl/PostagemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/impl/PostagemServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="923a515a-6a64-409e-a903-53fb5010e2d1" name="Default Changelist" comment="" />
     <list id="20315a88-6143-4161-8a92-433bdf78f536" name="Ignore" comment="" />
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -39,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/controller/ComentarioController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="137">
-              <caret line="48" column="77" lean-forward="true" selection-start-line="48" selection-start-column="77" selection-end-line="48" selection-end-column="77" />
+              <caret line="48" column="77" selection-start-line="48" selection-start-column="77" selection-end-line="48" selection-end-column="77" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -62,8 +52,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/impl/ComentarioServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="82">
-              <caret line="47" column="39" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
+            <state relative-caret-position="148">
+              <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -110,8 +100,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+            <state relative-caret-position="594">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
         </entry>
@@ -435,17 +425,23 @@
       <option name="project" value="LOCAL" />
       <updated>1629484028749</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Correção de bugs: Cadastro de comentário alterava ID de postagem quando retornava lista de comentário.">
+      <created>1629732622405</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1629732622405</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88474000" />
+    <option name="totallyTimeSpent" value="88732000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24810892" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24810892" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -456,12 +452,12 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3289689" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.5188216" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5188216" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.720121" weight="0.24549918" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.720121" visible="true" weight="0.24549918" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.09455371" side_tool="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
@@ -524,7 +520,8 @@
     <MESSAGE value="Adição de gitIgnore" />
     <MESSAGE value="Merge" />
     <MESSAGE value="Adição de parâmetros ao token retornado na autenticação" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adição de parâmetros ao token retornado na autenticação" />
+    <MESSAGE value="Correção de bugs: Cadastro de comentário alterava ID de postagem quando retornava lista de comentário." />
+    <option name="LAST_COMMIT_MESSAGE" value="Correção de bugs: Cadastro de comentário alterava ID de postagem quando retornava lista de comentário." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/JwtUserDetailsService.java" />
@@ -896,8 +893,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+        <state relative-caret-position="594">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
@@ -911,7 +908,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/api/controller/ComentarioController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
-          <caret line="48" column="77" lean-forward="true" selection-start-line="48" selection-start-column="77" selection-end-line="48" selection-end-column="77" />
+          <caret line="48" column="77" selection-start-line="48" selection-start-column="77" selection-end-line="48" selection-end-column="77" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -930,8 +927,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pactosolucoes/firebase/springbootfirebasesocialmedia/domain/service/impl/ComentarioServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="47" column="39" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
+        <state relative-caret-position="148">
+          <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
