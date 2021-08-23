@@ -26,7 +26,6 @@ public interface UsuarioService {
 
     void seguir(Long idUsuario, String emailUsuarioLogado);
 
-
     void darUnfollow(Long idUsuario, String emailUsuario);
 
     List<UsuarioResponseDto> listarQuemEuSigo(String emailUsuario);

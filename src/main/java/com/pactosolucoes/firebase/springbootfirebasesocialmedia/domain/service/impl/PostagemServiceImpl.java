@@ -93,9 +93,7 @@ public class PostagemServiceImpl implements PostagemService {
     @Override
     public void darLike(String id, String email) {
         Postagem postagem = getPostagemPorId(id);
-
         Usuario usuario = usuarioService.buscarPorEmail(email);
-
         if(verificarSeNaoTemLike(postagem.getLikes(), email)){
             postagem.getLikes().add(usuario);
             repository.save(postagem);
@@ -117,6 +115,7 @@ public class PostagemServiceImpl implements PostagemService {
     }
 
     private boolean verificarSeTemLike(List<Usuario> likes, String email){
+        if(likes == null) return false;
         Usuario like = likes.stream()
                 .filter(usuario1 -> usuario1.getEmail().equalsIgnoreCase(email))
                 .findFirst()

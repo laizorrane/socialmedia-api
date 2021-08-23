@@ -24,8 +24,14 @@ public @Data class Postagem {
     @JoinColumn(name = "usuarioId")
     @ManyToOne
     private Usuario criador;
-    @OneToMany
-    @JoinTable(name = "LIKES", joinColumns = @JoinColumn(name = "POSTAGEM_ID"), inverseJoinColumns = @JoinColumn(name = "USUARIO_ID"))
+    @ManyToMany
+    @JoinTable(
+            name = "LIKES",
+            uniqueConstraints = {
+                    @UniqueConstraint(columnNames = { "POSTAGEM_ID", "USUARIO_ID" })},
+            joinColumns = @JoinColumn(name = "POSTAGEM_ID", referencedColumnName = "ID"),
+            inverseJoinColumns = @JoinColumn(name = "USUARIO_ID", referencedColumnName = "ID")
+    )
     private List<Usuario> likes;
 
     public Postagem(String conteudo) {
@@ -36,10 +42,4 @@ public @Data class Postagem {
     public Postagem() {
     }
 
-    public List<Usuario> getLikes() {
-        if(this.likes == null){
-            this.likes = new ArrayList<>();
-        }
-        return likes;
-    }
 }

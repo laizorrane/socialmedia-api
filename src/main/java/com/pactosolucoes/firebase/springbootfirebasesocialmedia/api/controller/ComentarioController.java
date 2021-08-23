@@ -45,7 +45,7 @@ public class ComentarioController {
 
     @ApiOperation("Listar comentários de uma postagem.")
     @GetMapping
-    public ResponseEntity<List<ComentarioResponseDto>> buscarTodosComentarioDeUmaPostagem(@ApiParam(required = true, value = "Identificação de comentários de postagem") @RequestBody String idPostagem){
+    public ResponseEntity<List<ComentarioResponseDto>> buscarTodosComentarioDeUmaPostagem(@ApiParam(required = true, value = "Identificação de postagem") @RequestParam("idPostagem") String idPostagem){
         List<ComentarioResponseDto> comentarios = service.buscarTodosComentariosDeUmPost(idPostagem);
         return ResponseEntity.ok(comentarios);
     }
