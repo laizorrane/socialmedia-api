@@ -2,6 +2,7 @@ package com.pactosolucoes.firebase.springbootfirebasesocialmedia.api.controller;
 
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.api.dto.PostagemDto;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.api.dto.PostagemResponseDto;
+import com.pactosolucoes.firebase.springbootfirebasesocialmedia.api.dto.UsuarioResponseDto;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.config.security.JwtTokenUtil;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.entity.Usuario;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.service.PostagemService;
@@ -103,5 +104,12 @@ public class PostagemController {
     public ResponseEntity<Void> removerLike(@ApiParam(required = true, value = "Id de identificação da postagem a remover like.") @PathVariable("id") String id){
         service.removerLike(id, tokenUtil.getEmailUsuario());
         return ResponseEntity.accepted().build();
+    }
+
+    @ApiOperation("Listar likes de uma postagem.")
+    @GetMapping("/{id}/like")
+    public ResponseEntity<List<UsuarioResponseDto>> buscarTodosLikesDeUmaPostagem(@ApiParam(required = true, value = "Identificação de postagem") @PathVariable("id") String idPostagem){
+        List<UsuarioResponseDto> usuario = service.buscarTodosLikesDeUmPost(idPostagem);
+        return ResponseEntity.ok(usuario);
     }
 }

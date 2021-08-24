@@ -84,10 +84,15 @@ public class PostagemServiceImpl implements PostagemService {
     }
 
     private PostagemResponseDto getPostagemReponseDto(Postagem postagem) {
-        Usuario criador = postagem.getCriador();
-        UsuarioResponseDto usuarioResponseDto = new UsuarioResponseDto( criador.getNome(), criador.getId().toString());
-        return new PostagemResponseDto(postagem.getConteudo(), postagem.getData(), postagem.getId(), usuarioResponseDto);
+        return new PostagemResponseDto(
+                postagem.getConteudo(),
+                postagem.getData(),
+                postagem.getId(),
+                getUsuarioResponseDto(postagem.getCriador()));
+    }
 
+    private UsuarioResponseDto getUsuarioResponseDto(Usuario usuario){
+        return new UsuarioResponseDto( usuario.getNome(), usuario.getId().toString());
     }
 
     @Override
@@ -108,6 +113,13 @@ public class PostagemServiceImpl implements PostagemService {
             postagem.getLikes().remove(usuario);
             repository.save((postagem));
         }
+    }
+
+    @Override
+    public List<UsuarioResponseDto> buscarTodosLikesDeUmPost(String idPostagem) {
+        Postagem postagem = getPostagemPorId(idPostagem);
+        List<Usuario> likes = postagem.getLikes();
+        return likes.stream().map(this::getUsuarioResponseDto).collect(Collectors.toList());
     }
 
     private boolean verificarSeNaoTemLike(List<Usuario> likes, String email){
