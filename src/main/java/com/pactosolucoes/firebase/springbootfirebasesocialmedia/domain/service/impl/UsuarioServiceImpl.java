@@ -160,6 +160,7 @@ public class UsuarioServiceImpl implements UsuarioService {
         Usuario usuario = buscarPorEmail(emailUsuario);
         return usuario.getListaQuemSigo()
                 .stream().map(this::getUsuarioResponse)
+                .filter(usuarioResponseDto -> !usuarioResponseDto.email.equalsIgnoreCase(emailUsuario))
                 .collect(Collectors.toList());
     }
 
