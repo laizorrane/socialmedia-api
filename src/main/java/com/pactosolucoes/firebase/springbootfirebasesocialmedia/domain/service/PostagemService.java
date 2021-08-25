@@ -1,6 +1,5 @@
 package com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.service;
 
-import com.pactosolucoes.firebase.springbootfirebasesocialmedia.api.controller.SeguindoController;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.api.dto.PostagemDto;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.api.dto.PostagemResponseDto;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.api.dto.UsuarioResponseDto;

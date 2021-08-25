@@ -1,9 +1,6 @@
 package com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.repository;
 
-import com.pactosolucoes.firebase.springbootfirebasesocialmedia.api.controller.SeguindoController;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.entity.Postagem;
-import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.entity.Usuario;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

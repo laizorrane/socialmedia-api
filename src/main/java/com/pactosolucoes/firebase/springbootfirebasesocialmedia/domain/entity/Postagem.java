@@ -1,10 +1,8 @@
 package com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.entity;
 
-import com.pactosolucoes.firebase.springbootfirebasesocialmedia.api.dto.PostagemResponseDto;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 

@@ -7,7 +7,6 @@ import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.exception
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.repository.UsuarioRepository;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.service.UsuarioService;
 import org.apache.commons.lang3.StringUtils;
-import org.aspectj.apache.bcel.Repository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

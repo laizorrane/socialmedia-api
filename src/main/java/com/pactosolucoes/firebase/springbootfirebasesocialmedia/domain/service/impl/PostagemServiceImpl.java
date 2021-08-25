@@ -7,7 +7,7 @@ import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.entity.Po
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.entity.Usuario;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.exceptions.ValidacaoException;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.repository.PostagemRepository;
-import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.repository.UsuarioRepository;
+import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.service.ComentarioService;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.service.PostagemService;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.service.UsuarioService;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.util.Utils;
@@ -28,7 +28,8 @@ public class PostagemServiceImpl implements PostagemService {
     private PostagemRepository repository;
     @Autowired
     private UsuarioService usuarioService;
-
+    @Autowired
+    private ComentarioService comentarioService;
 
     @Override
     public String cadastrar(PostagemDto postagemDto, String emailCriador) {
@@ -67,6 +68,7 @@ public class PostagemServiceImpl implements PostagemService {
         Postagem postagem = getPostagemPorId(idPostagem);
         if (!isUsuarioCriador(postagem, emailUsuario))
             throw new ValidacaoException("Você não tem permissão para excluir esta postagem.");
+        repository.delete(postagem);
 
     }
 
@@ -84,10 +86,13 @@ public class PostagemServiceImpl implements PostagemService {
     }
 
     private PostagemResponseDto getPostagemReponseDto(Postagem postagem) {
+        Long qtdeComentarios = comentarioService.qtdeComentarios(postagem.getId());
         return new PostagemResponseDto(
                 postagem.getConteudo(),
                 postagem.getData(),
                 postagem.getId(),
+                qtdeComentarios,
+                Integer.toUnsignedLong(postagem.getLikes().size()),
                 getUsuarioResponseDto(postagem.getCriador()));
     }
 

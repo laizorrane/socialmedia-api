@@ -3,7 +3,6 @@ package com.pactosolucoes.firebase.springbootfirebasesocialmedia.api.controller;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.api.dto.ComentarioDto;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.api.dto.ComentarioResponseDto;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.config.security.JwtTokenUtil;
-import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.entity.Comentario;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.service.ComentarioService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

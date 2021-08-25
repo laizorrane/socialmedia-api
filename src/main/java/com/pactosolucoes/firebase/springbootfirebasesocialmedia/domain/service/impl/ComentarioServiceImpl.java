@@ -74,6 +74,7 @@ public class ComentarioServiceImpl implements ComentarioService {
         Comentario comentario = getComentarioPorId(idComentario);
         if (!isUsuarioCriador(comentario, emailUsuario))
             throw new ValidacaoException("Você não tem permissão para excluir este comentário.");
+        repository.delete(comentario);
 
     }
     private boolean isUsuarioCriador(Comentario comentario, String emailUsuario) {
@@ -89,5 +90,8 @@ public class ComentarioServiceImpl implements ComentarioService {
 
     }
 
-
+    @Override
+    public Long qtdeComentarios(String idPostagem) {
+        return repository.countComentarioByPostagem_Id(idPostagem);
     }
+}

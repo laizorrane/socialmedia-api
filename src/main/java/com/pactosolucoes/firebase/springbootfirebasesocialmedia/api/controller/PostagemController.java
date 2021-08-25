@@ -4,7 +4,6 @@ import com.pactosolucoes.firebase.springbootfirebasesocialmedia.api.dto.Postagem
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.api.dto.PostagemResponseDto;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.api.dto.UsuarioResponseDto;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.config.security.JwtTokenUtil;
-import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.entity.Usuario;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.service.PostagemService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -74,7 +73,7 @@ public class PostagemController {
     }
 
     @ApiOperation("Editar uma postagem.")
-    @PutMapping
+    @PutMapping("/{idPostagem}")
     @ResponseStatus(HttpStatus.ACCEPTED)
 
     public ResponseEntity<Void> editarPostagem(@ApiParam(name = "Postagem", required = true, value = "Representação de uma postagem.") @PathVariable("idPostagem") String id, @RequestBody PostagemDto postagemDto) {

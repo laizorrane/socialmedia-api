@@ -1,6 +1,5 @@
 package com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.service.impl;
 
-import com.pactosolucoes.firebase.springbootfirebasesocialmedia.api.dto.UsuarioResponseDto;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.entity.Usuario;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;

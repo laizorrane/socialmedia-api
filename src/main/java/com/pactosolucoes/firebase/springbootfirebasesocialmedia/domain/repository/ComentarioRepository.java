@@ -12,6 +12,7 @@ import java.util.List;
 public interface ComentarioRepository extends JpaRepository<Comentario, String> {
 
     List<Comentario> findAllByPostagem_id(String idPostagem);
+    Long countComentarioByPostagem_Id(String id);
 
 
 

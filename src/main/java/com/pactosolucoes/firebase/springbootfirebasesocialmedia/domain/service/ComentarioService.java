@@ -21,5 +21,7 @@ public interface ComentarioService {
 
     ComentarioResponseDto buscarComentarioPeloId(String id);
 
+    Long qtdeComentarios(String idPostagem);
+
 }
 

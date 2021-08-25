@@ -9,7 +9,6 @@ import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.service.U
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.service.impl.JwtUserDetailsService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
