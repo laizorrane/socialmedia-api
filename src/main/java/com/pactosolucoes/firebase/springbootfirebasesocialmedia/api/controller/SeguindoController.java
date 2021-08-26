@@ -6,7 +6,9 @@ import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.service.U
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -29,17 +31,19 @@ public class SeguindoController {
     @Autowired
     private JwtTokenUtil tokenUtil;
 
-    @ApiOperation("Listar todos que eu sigo.")
+    @ApiOperation("Listar todos que usuário segue.")
     @GetMapping
-    public ResponseEntity<List<UsuarioResponseDto>> listar(){
-        List<UsuarioResponseDto> listaQuemEuSigo = service.listarQuemEuSigo(tokenUtil.getEmailUsuario());
+    public ResponseEntity<List<UsuarioResponseDto>> listar(@ApiParam(required = true, value = "Identificação do usuário requerido.") @RequestParam(value = "email", required = false) String emailFront){
+        String email = StringUtils.isBlank(emailFront) ? tokenUtil.getEmailUsuario(): emailFront;
+        List<UsuarioResponseDto> listaQuemEuSigo = service.listarQuemEuSigo(email);
         return ResponseEntity.ok(listaQuemEuSigo);
     }
 
-    @ApiOperation("Listar todos que me seguem.")
+    @ApiOperation("Listar todos que seguem usuário.")
     @GetMapping("/seguidores")
-    public ResponseEntity<List<UsuarioResponseDto>> listarSeguidores(){
-        List<UsuarioResponseDto> listaQuemMeSegue = service.listarQuemMeSegue(tokenUtil.getEmailUsuario());
+    public ResponseEntity<List<UsuarioResponseDto>> listarSeguidores(@ApiParam(required = true, value = "Identificação do usuário requerido.") @RequestParam(value = "email", required = false) String emailFront){
+        String email = StringUtils.isBlank(emailFront) ? tokenUtil.getEmailUsuario(): emailFront;
+        List<UsuarioResponseDto> listaQuemMeSegue = service.listarQuemMeSegue(email);
         return ResponseEntity.ok(listaQuemMeSegue);
     }
 
