@@ -51,7 +51,7 @@ public class ComentarioServiceImpl implements ComentarioService {
     }
     private ComentarioResponseDto getComentarioResponseDto(Comentario comentario) {
         Usuario criador = comentario.getCriador();
-        UsuarioResponseDto usuarioResponseDto = new UsuarioResponseDto( criador.getNome(), criador.getId().toString());
+        UsuarioResponseDto usuarioResponseDto = new UsuarioResponseDto( criador.getNome(), criador.getImagemPerfil(), criador.getId().toString());
         return new ComentarioResponseDto(comentario.getConteudo(), comentario.getData(), comentario.getId(), comentario.getPostagem().getId(), usuarioResponseDto);
 
     }

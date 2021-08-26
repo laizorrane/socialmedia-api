@@ -97,7 +97,7 @@ public class PostagemServiceImpl implements PostagemService {
     }
 
     private UsuarioResponseDto getUsuarioResponseDto(Usuario usuario){
-        return new UsuarioResponseDto( usuario.getNome(), usuario.getId().toString());
+        return new UsuarioResponseDto( usuario.getNome(), usuario.getImagemPerfil(), usuario.getId().toString());
     }
 
     @Override

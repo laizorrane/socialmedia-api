@@ -26,8 +26,9 @@ public class UsuarioDto {
         this.imagemPerfil = imagemPerfil;
     }
 
-    public UsuarioDto(String nome) {
+    public UsuarioDto(String nome, String imagemPerfil) {
         this.nome = nome;
+        this.imagemPerfil = imagemPerfil;
     }
 
     public UsuarioDto() {
