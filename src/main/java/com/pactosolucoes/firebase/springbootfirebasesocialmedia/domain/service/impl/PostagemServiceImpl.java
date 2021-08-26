@@ -3,6 +3,7 @@ package com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.service.
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.api.dto.PostagemDto;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.api.dto.PostagemResponseDto;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.api.dto.UsuarioResponseDto;
+import com.pactosolucoes.firebase.springbootfirebasesocialmedia.config.security.JwtTokenUtil;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.entity.Postagem;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.entity.Usuario;
 import com.pactosolucoes.firebase.springbootfirebasesocialmedia.domain.exceptions.ValidacaoException;
@@ -30,6 +31,8 @@ public class PostagemServiceImpl implements PostagemService {
     private UsuarioService usuarioService;
     @Autowired
     private ComentarioService comentarioService;
+    @Autowired
+    private JwtTokenUtil jwtTokenUtil;
 
     @Override
     public String cadastrar(PostagemDto postagemDto, String emailCriador) {
@@ -93,7 +96,8 @@ public class PostagemServiceImpl implements PostagemService {
                 postagem.getId(),
                 qtdeComentarios,
                 Integer.toUnsignedLong(postagem.getLikes().size()),
-                getUsuarioResponseDto(postagem.getCriador()));
+                getUsuarioResponseDto(postagem.getCriador()),
+                verificarSeTemLike(postagem.getLikes()));
     }
 
     private UsuarioResponseDto getUsuarioResponseDto(Usuario usuario){
@@ -104,7 +108,7 @@ public class PostagemServiceImpl implements PostagemService {
     public void darLike(String id, String email) {
         Postagem postagem = getPostagemPorId(id);
         Usuario usuario = usuarioService.buscarPorEmail(email);
-        if(verificarSeNaoTemLike(postagem.getLikes(), email)){
+        if(verificarSeNaoTemLike(postagem.getLikes())){
             postagem.getLikes().add(usuario);
             repository.save(postagem);
         }
@@ -114,7 +118,7 @@ public class PostagemServiceImpl implements PostagemService {
     public  void removerLike(String id, String email) {
         Postagem postagem = getPostagemPorId(id);
         Usuario usuario = usuarioService.buscarPorEmail(email);
-        if(verificarSeTemLike(postagem.getLikes(), email)) {
+        if(verificarSeTemLike(postagem.getLikes())) {
             postagem.getLikes().remove(usuario);
             repository.save((postagem));
         }
@@ -127,14 +131,14 @@ public class PostagemServiceImpl implements PostagemService {
         return likes.stream().map(this::getUsuarioResponseDto).collect(Collectors.toList());
     }
 
-    private boolean verificarSeNaoTemLike(List<Usuario> likes, String email){
-        return !verificarSeTemLike(likes, email);
+    private boolean verificarSeNaoTemLike(List<Usuario> likes){
+        return !verificarSeTemLike(likes);
     }
 
-    private boolean verificarSeTemLike(List<Usuario> likes, String email){
+    private boolean verificarSeTemLike(List<Usuario> likes){
         if(likes == null) return false;
         Usuario like = likes.stream()
-                .filter(usuario1 -> usuario1.getEmail().equalsIgnoreCase(email))
+                .filter(usuario1 -> usuario1.getEmail().equalsIgnoreCase(jwtTokenUtil.getEmailUsuario()))
                 .findFirst()
                 .orElse(null);
 
