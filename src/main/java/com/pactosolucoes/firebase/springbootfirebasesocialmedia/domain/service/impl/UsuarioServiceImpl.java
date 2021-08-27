@@ -142,7 +142,7 @@ public class UsuarioServiceImpl implements UsuarioService {
     public void darUnfollow(Long idUsuario, String emailUsuario) {
         Usuario quemVouPararDeSeguir = getUsuarioPorId(idUsuario);
         Usuario usuarioLogado = buscarPorEmail(emailUsuario);
-        if (jaSigo(usuarioLogado.getListaQuemSigo(), quemVouPararDeSeguir.getId())) {
+        if (jaSigo(usuarioLogado.getListaQuemSigo(), quemVouPararDeSeguir.getId()) && !quemVouPararDeSeguir.equals(usuarioLogado)) {
             usuarioLogado.setListaQuemSigo(removerQuemSigo(usuarioLogado.getListaQuemSigo(), quemVouPararDeSeguir.getId()));
             repository.save(usuarioLogado);
         }
@@ -168,7 +168,7 @@ public class UsuarioServiceImpl implements UsuarioService {
         Usuario usuario = buscarPorEmail(emailUsuario);
         List<Usuario> usuarios = repository.buscarTodosQueMeSegue(usuario.getId());
         if (usuarios != null && !usuarios.isEmpty()) {
-            return usuarios.stream().map(this::getUsuarioResponse)
+            return usuarios.stream().map(this::getUsuarioResponse).filter(usuarioResponseDto -> !usuarioResponseDto.email.equalsIgnoreCase(emailUsuario))
                     .collect(Collectors.toList());
         }
         return new ArrayList<>();
